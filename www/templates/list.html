@@ -1,0 +1,12 @@
+<ion-view title="Weather">
+<ion-content  ng-controller="WeatherCtrl">
+	  <ion-list>
+	  <ion-item href="#/detail/{{weather.dt}}" class="item-thumbnail-left" ng-repeat="weather in weathers">
+	  <img src="http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png"/>
+	  <h2>{{weather.weather[0].main}} ({{weather.weather[0].description}})</h2> 
+	  <p>{{weather.main.temp -273 | number:1}} C </p>
+	  <p>{{weather.dt *1000 | date:'medium'}}</p>
+  </ion item>
+  </ion-list>
+      </ion-content>
+  </ion-view>

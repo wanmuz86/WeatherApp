@@ -1,0 +1,22 @@
+<ion-view title="Weather Detail">
+<ion-content  ng-controller="DetailCtrl">
+<div class="list card">
+
+  <div class="item item-avatar">
+    <img src="http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png">
+    <h2>{{weather.weather[0].main}}</h2>
+    <p>{{weather.weather[0].description}}</p>
+  </div>
+
+  <div class="item item-body">
+	  <p><b>Humidity:</b> {{weather.main.humidity}}</p>
+	  <p><b>Temperature: </b>{{weather.main.temp - 273 | number:1 }} C</p>
+	  <p><b>Temperature minimum: </b>{{weather.main.temp_min - 273 | number:1 }} C</p>
+	  <p><b>Temperature maximum:</b> {{weather.main.temp_max -273| number:1}} C</p>
+	  <p><b>Pressure: </b>{{weather.main.pressure  }}</p>
+    </p>
+  </div>
+</div>
+
+      </ion-content>
+  </ion-view>
